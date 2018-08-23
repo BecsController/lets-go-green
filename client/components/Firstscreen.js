@@ -1,26 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 
-import Firstscreen from './client/components/Firstscreen.js'
 //Assets:
-const logo = require('./assets/logo.jpg')
+const logo = require('../../assets/logo.jpg')
 
-const SignedOut = createStackNavigator({
-    Start: {
-        screen: Firstscreen
-    },
-})
-
-export default class App extends React.Component {
+export default class Firstscreen extends React.Component {
   render() {
     return (
       <React.Fragment>
        <View style={styles.container}>
          <View style={styles.insideContainer}>
           <Image style={styles.logo} source={logo} />
-          <Text style={styles.title}>Lets Go Green</Text>
-          <Button style={styles.button} title="Enter" onPress={() => navigate('Start')}/>
+          <Text style={styles.title}>Are you new here?</Text>
+          <Button style={styles.button} title="Sign Up" onPress={() => console.log('Pressed Sign Up')}/>
+          <Button style={styles.button} title="Login" onPress={() => console.log('Pressed Login')}/>
          </View>
         </View>
       </React.Fragment>
@@ -31,7 +24,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3EAD29',
+    backgroundColor: '#2365A3',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -49,7 +42,7 @@ const styles = StyleSheet.create({
   },
   button: {
     fontWeight: "700",
-    backgroundColor: '#3EAD29',
+    backgroundColor: '#2365A3',
     margin: 25,
     fontSize: 25,
     padding: 10,
