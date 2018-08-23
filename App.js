@@ -9,9 +9,9 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
        <View style={styles.container}>
-         <View style={styles.title}>
+         <View style={styles.insideContainer}>
           <Image style={styles.logo} source={logo} />
-          <Text>Lets Go Green</Text>
+          <Text style={styles.title}>Lets Go Green</Text>
           <Button style={styles.button} title="Enter" onPress={() => console.log('Pressed')}/>
          </View>
         </View>
@@ -27,22 +27,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
+  insideContainer: {
     width: 300,
     height: 525,
     backgroundColor: '#fff',
-    borderRadius: 4,
-    borderWidth: 1,
-    borderColor: '#3EAD29',
+    justifyContent: 'center',
+  },
+  title: {
     alignSelf: 'center',
+    marginVertical: 25,
+    paddingVertical: 10,
+    fontSize: 30,
   },
   button: {
     fontWeight: "700",
-    color: '#3EAD29',
+    backgroundColor: '#3EAD29',
+    margin: 25,
+    fontSize: 25,
+    padding: 10,
   },
   logo: {
     alignSelf: 'center',
     width: 250,
     height: 150,
+    padding: 10,
   },
 });
